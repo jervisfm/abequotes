@@ -1,0 +1,93 @@
+.navbar-inverse {
+	border: currentColor !important; border-image: none !important; height: 50px !important; background-image: none !important; background-color: rgb(61, 73, 83) !important;
+}
+.card-row {
+	padding-top: 12px;
+}
+.select-month-button-container {
+	margin-left: -80px;
+}
+.select-month-button {
+	width: 150px; font-size: 16px; font-weight: 100;
+}
+.quote-card-content {
+	text-align: justify; color: rgb(33, 33, 33); line-height: 1.5; padding-top: 10px; padding-right: 20px; padding-left: 20px; font-size: 16px;
+}
+.quote-card-author {
+	text-align: left; color: rgb(158, 158, 158); line-height: 1.5; padding-right: 20px; padding-left: 20px; font-size: 15px;
+}
+.quote-card-date {
+	text-align: left; color: rgb(158, 158, 158); line-height: 0; padding-right: 20px; padding-left: 20px; font-size: 15px;
+}
+.navbar-brand {
+	left: 0px; width: 100%; text-align: center; color: white !important; margin-top: -7px; position: absolute;
+}
+#navbar-menu-list li {
+	padding-right: 0px; text-decoration: none; display: inline;
+}
+.quote-card-img {
+	width: 100%;
+}
+.quote-card {
+	padding: 0px 0px 10px; background-color: white;
+}
+html {
+	height: 100%; font-family: "Roboto" !important; font-weight: 300 !important; -ms-overflow-x: hidden; max-width: 100%; background-color: rgb(250, 250, 250);
+}
+body {
+	height: 100%; font-family: "Roboto" !important; font-weight: 300 !important; -ms-overflow-x: hidden; max-width: 100%; background-color: rgb(250, 250, 250);
+}
+.quote-title {
+	text-align: center;
+}
+.scrollable {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; -ms-overflow-x: hidden; -ms-overflow-y: scroll; max-width: 100%; -webkit-overflow-scrolling: touch;
+}
+md-tabs {
+	height: 100% !important;
+}
+md-content {
+	height: 100% !important;
+}
+#tabs {
+	height: 100% !important;
+}
+md-tabs-wrapper {
+	background-color: rgb(69, 90, 100) !important;
+}
+md-tabs .md-active.md-tab {
+	color: white;
+}
+md-tabs-content-wrapper {
+	top: 48px !important;
+}
+md-tabs md-ink-bar {
+	background: white; color: white;
+}
+md-tabs .md-tab {
+	color: rgb(176, 190, 197);
+}
+md-icon {
+	fill: white;
+}
+md-content {
+	background-color: rgb(238, 238, 238);
+}
+md-tabs-wrapper {
+	border-width: 0px !important;
+}
+.showbox {
+	padding: 5%; left: 0px; top: 40%; right: 0px; bottom: 0px; position: absolute;
+}
+.loader {
+	margin: 0px auto; width: 60px; position: relative;
+}
+.loader::before {
+	padding-top: 100%; display: block; content: "";
+}
+.circular {
+	margin: auto; transform-origin: center center; animation:rotate 2s linear infinite; left: 0px; top: 0px; width: 100%; height: 100%; right: 0px; bottom: 0px; position: absolute; -webkit-transform-origin: center center; -webkit-animation: rotate 2s linear infinite;
+}
+.path {
+	animation:dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite; stroke-dasharray: 1,200; stroke-dashoffset: 0; stroke-linecap: round; -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+}
