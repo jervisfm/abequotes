@@ -17,3 +17,4 @@ One about Github pages is that the initial path component has to be repo name so
 ## Status / Progress
 - Confirmed that local data JSON working.
 - Update image URIs: done and confirmed working.
+- Confirmed Local website loading is working. 
