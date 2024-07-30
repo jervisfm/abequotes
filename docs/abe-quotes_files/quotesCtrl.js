@@ -13,7 +13,8 @@ function loadJsonData(callback) {
   var xhr = new XMLHttpRequest();
 
   // Configure it: GET-request for the URL /abe-quotes-data.json
-  xhr.open('GET', '/abe-quotes-data.json', true);
+  // Note: Need to include github repo in path, otherwise path 404s.
+  xhr.open('GET', '/abequotes/abe-quotes-data.json', true);
 
   // Set the response type to JSON
   xhr.responseType = 'json';
