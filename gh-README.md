@@ -1,6 +1,8 @@
 # abequotes
 Abe Quotes Web Archive
 
+Archive for a dearest friend that had [passed away](https://www.youtube.com/watch?v=g4nv-mCx-WQ). Original site is at https://abequotes.firebaseapp.com/
+
 ## Changes
 We updated the `quotesCtrl.js` file under abe-quotes_file so that it loads our local
 JSON data for archiving purposes.
