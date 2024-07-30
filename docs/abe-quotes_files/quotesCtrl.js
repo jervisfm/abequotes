@@ -8,6 +8,12 @@
  * Callback would be invoked with a JSON quote array of responses
  */
 function loadJsonData(callback) {
+
+  // Check if we have already loaded a local copy of data and so just use that
+  if (window.abeQuotesData) {
+    callback(window.abeQuotesData);
+    return;
+  }
   
   // Create a new XMLHttpRequest object
   var xhr = new XMLHttpRequest();
