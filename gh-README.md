@@ -8,4 +8,4 @@ JSON data for archiving purposes.
 
 ## Status / Progress
 - Confirmed that local data JSON working.
-- Update image URIs: done and confirmed working
+- Update image URIs: done and confirmed working.
