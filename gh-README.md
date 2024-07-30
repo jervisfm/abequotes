@@ -18,3 +18,6 @@ One about Github pages is that the initial path component has to be repo name so
 - Confirmed that local data JSON working.
 - Update image URIs: done and confirmed working.
 - Confirmed Local website loading is working. 
+
+## Future Consideration
+- TODO: Explore compressing images/ folder for faster site loading.
