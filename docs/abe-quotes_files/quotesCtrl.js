@@ -28,7 +28,7 @@ function loadJsonData(callback) {
       console.error(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
     } else { // show the result
       callback(xhr.response);
-      console.log(xhr.response); // response is the server's response
+      //console.log(xhr.response); // response is the server's response
     }
   };
 
