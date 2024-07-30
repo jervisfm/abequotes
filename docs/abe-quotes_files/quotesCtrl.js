@@ -2,6 +2,44 @@
 'use strict';
 
 /**
+ * Loads abe quotes json data and invokes the given provided callback with
+ * the loaded data on success. 
+ * 
+ * Callback would be invoked with a JSON quote array of responses
+ */
+function loadJsonData(callback) {
+  
+  // Create a new XMLHttpRequest object
+  var xhr = new XMLHttpRequest();
+
+  // Configure it: GET-request for the URL /abe-quotes-data.json
+  xhr.open('GET', '/abe-quotes-data.json', true);
+
+  // Set the response type to JSON
+  xhr.responseType = 'json';
+
+  // Send the request over the network
+  xhr.send();
+
+  // This will be called after the response is received
+  xhr.onload = function() {
+    if (xhr.status != 200) { // analyze HTTP response status
+      console.error(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
+    } else { // show the result
+      callback(xhr.response);
+      console.log(xhr.response); // response is the server's response
+    }
+  };
+
+  xhr.onerror = function() {
+    callback(undefined);
+    console.error("Request failed");
+  };
+
+  
+}
+
+/**
  * The main controller for the app. The controller:
  * - retrieves and persists the model via the $firebase service
  * - provides a way to add new data
@@ -10,9 +48,9 @@ quotes.controller('QuotesCtrl', function QuotesCtrl($scope, $location, $firebase
    // Bind the quotes to the firebase provider.
 
 
-  var url = 'https://abequotes.firebaseio.com/quotes';
-  var fireRef = new Firebase(url);
-  $scope.quotes = $firebase(fireRef).$asArray();
+  //var url = 'https://abequotes.firebaseio.com/quotes';
+  //var fireRef = new Firebase(url);
+  
   $scope.areQuotesLoaded = false;
 
   var months = [
@@ -58,9 +96,12 @@ quotes.controller('QuotesCtrl', function QuotesCtrl($scope, $location, $firebase
     tabs.push(monthInfo);
   }
 
-
-  $scope.quotes.$loaded().then(function(){
-    angular.forEach($scope.quotes, function(quote) {
+  loadJsonData((arrayResponse) => {
+    if (!arrayResponse) {
+      console.error("Loading JSON data failed");
+      alert("Data loading failed - site won't render");
+    }
+    angular.forEach(arrayResponse, function(quote) {
       var dateObject = new Date(quote.creation_date);
       var tabIdx = dateObject.getMonth();
       tabs[tabIdx].quotes.unshift(quote);
